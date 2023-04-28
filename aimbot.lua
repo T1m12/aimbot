@@ -12,7 +12,7 @@ local pcall, getgenv, next, setmetatable, Vector2new, CFramenew, Color3fromRGB, 
 
 --// Launching checks
 
-if not getgenv().AirHub or getgenv().AirHub.Aimbot then return end
+if not getgenv().gs or getgenv().gs.Aimbot then return end
 
 --// Services
 
@@ -29,7 +29,7 @@ local RequiredDistance, Typing, Running, ServiceConnections, Animation, Original
 
 --// Environment
 
-getgenv().AirHub.Aimbot = {
+getgenv().gs.Aimbot = {
 	Settings = {
 		Enabled = true,
 		TeamCheck = false,
@@ -58,7 +58,7 @@ getgenv().AirHub.Aimbot = {
 	FOVCircle = Drawingnew("Circle")
 }
 
-local Environment = getgenv().AirHub.Aimbot
+local Environment = getgenv().gs.Aimbot
 
 --// Core Functions
 
@@ -193,8 +193,8 @@ function Environment.Functions:Exit()
 
 	Environment.FOVCircle:Remove()
 
-	getgenv().AirHub.Aimbot.Functions = nil
-	getgenv().AirHub.Aimbot = nil
+	getgenv().gs.Aimbot.Functions = nil
+	getgenv().gs.Aimbot = nil
 
 	Load = nil; ConvertVector = nil; CancelLock = nil; GetClosestPlayer = nil;
 end
