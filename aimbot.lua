@@ -31,15 +31,15 @@ local RequiredDistance, Typing, Running, ServiceConnections, Animation, Original
 
 getgenv().AirHub.Aimbot = {
 	Settings = {
-		Enabled = false,
+		Enabled = true,
 		TeamCheck = false,
 		AliveCheck = true,
 		WallCheck = false,
 		Sensitivity = 0, -- Animation length (in seconds) before fully locking onto target
 		ThirdPerson = false, -- Uses mousemoverel instead of CFrame to support locking in third person (could be choppy)
 		ThirdPersonSensitivity = 3,
-		TriggerKey = "MouseButton2",
-		Toggle = false,
+		TriggerKey = "E",
+		Toggle = true,
 		LockPart = "Head" -- Body part to lock on
 	},
 
